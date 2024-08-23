@@ -36,7 +36,7 @@ public class Main {
 		}
 
 		AmsAddr addr = new AmsAddr();
-		// addr.setNetIdStringEx("X.X.X.X.1.1"); // TODO ADJUST THIS VALUE!
+		addr.setNetIdStringEx("X.X.X.X.1.1"); // TODO ADJUST THIS VALUE!
 		addr.setPort(851);
 
 		// Uncomment and adjust if automatic AMS NetId deduction is
