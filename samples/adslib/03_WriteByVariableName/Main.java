@@ -37,7 +37,6 @@ public class Main {
 
 		AmsAddr addr = new AmsAddr();
 		// addr.setNetIdStringEx("X.X.X.X.1.1"); // TODO ADJUST THIS VALUE!
-		addr.setNetIdStringEx("172.18.236.194.1.1");
 		addr.setPort(851);
 
 		// Uncomment and adjust if automatic AMS NetId deduction is
@@ -50,7 +49,7 @@ public class Main {
 
 		// Since the AMS routing isn't handled by the TwinCAT AMS Router, we need
 		// to tell the AdsLib which IP address is associated with the AMS NetId.
-		AdsCallDllFunction.adsAddLocalRoute(addr.getNetId(), "192.168.59.215"); // TODO ADJUST THIS VALUE!
+		AdsCallDllFunction.adsAddLocalRoute(addr.getNetId(), "X.X.X.X"); // TODO ADJUST THIS VALUE!
 
 		// Get handle by symbol name
 		JNILong lengthReturn = new JNILong();
