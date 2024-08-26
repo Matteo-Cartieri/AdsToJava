@@ -10,8 +10,8 @@ import de.beckhoff.jni.tcads.AmsAddr;
 /**
  * Sample - add event listener for PLC variable
  * 
- * @author Fabio Richeri
- * @author Matteo Cartieri
+ * @author Fabio Richeri (fabio.richeri@sinolo.it)
+ * @author Matteo Cartieri (matteo.cartieri02@gmail.com)
  *
  */
 public class Main {
@@ -36,6 +36,7 @@ public class Main {
 			}
 
 			AmsAddr addr = new AmsAddr();
+			// Set the netId of the PLC target 
 			addr.setNetIdStringEx("X.X.X.X.1.1"); // TODO ADJUST THIS VALUE!
 			addr.setPort(851);
 
@@ -49,6 +50,7 @@ public class Main {
 
 			// Since the AMS routing isn't handled by the TwinCAT AMS Router, we need
 			// to tell the AdsLib which IP address is associated with the AMS NetId.
+			// Set this with the IP of the PLC target
 			AdsCallDllFunction.adsAddLocalRoute(addr.getNetId(), "X.X.X.X"); // TODO ADJUST THIS VALUE!
 
 			// Get handle by symbol name
