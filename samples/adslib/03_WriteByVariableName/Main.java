@@ -17,7 +17,7 @@ import de.beckhoff.jni.tcads.AmsAddr;
 public class Main {
 	public static void main(String[] args) {
 		// Set up the ADS route between your Linux system and target PLC before running
-		// the program
+		// the program. Usually <linux_netid> is <linux_ip> plus .1.1
 
 		// ./adslib_for_linux/build/AdsTool/AdsTool <target_ip> addroute
 		// --addr=<linux_ip> --netid=<linux_netid> --password=<target_password>
